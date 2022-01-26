@@ -5,11 +5,13 @@ view: d_part {
 
 
   dimension: p_brand {
+    label: "Part Brand"
     type: string
     sql: ${TABLE}."P_BRAND" ;;
   }
 
   dimension: p_mfgr {
+    label: "Part mfgr"
     type: string
     sql: ${TABLE}."P_MFGR" ;;
   }
@@ -28,11 +30,13 @@ view: d_part {
   }
 
   dimension: p_size {
+    label: "Part Size"
     type: number
     sql: ${TABLE}."P_SIZE" ;;
   }
 
   dimension: p_type {
+    label: "Part Type"
     type: string
     sql: ${TABLE}."P_TYPE" ;;
   }

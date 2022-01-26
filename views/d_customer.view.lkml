@@ -4,6 +4,7 @@ view: d_customer {
 
 
   dimension: c_address {
+    label: "Customer Address"
     type: string
     sql: ${TABLE}."C_ADDRESS" ;;
   }
@@ -16,6 +17,7 @@ view: d_customer {
   }
 
   dimension: c_mktsegment {
+    label: "Customer Segment"
     type: number
     sql: ${TABLE}."C_MKTSEGMENT" ;;
   }
@@ -27,16 +29,19 @@ view: d_customer {
   }
 
   dimension: c_nation {
+    label: "Customer Nation"
     type: string
     sql: ${TABLE}."C_NATION" ;;
   }
 
   dimension: c_phone {
+    label: "Customer Phone"
     type: string
     sql: ${TABLE}."C_PHONE" ;;
   }
 
   dimension: c_region {
+    label: "Customer Region"
     type: string
     sql: ${TABLE}."C_REGION" ;;
   }

@@ -4,11 +4,13 @@ view: f_lineitems {
   label: "Orders"
 
   dimension: l_availqty {
+    label: "Available Qty"
     type: number
     sql: ${TABLE}."L_AVAILQTY" ;;
   }
 
   dimension: l_clerk {
+    label: "Clerk"
     type: string
     sql: ${TABLE}."L_CLERK" ;;
   }
@@ -26,16 +28,19 @@ view: f_lineitems {
   }
 
   dimension: l_discount {
+    label: "Discount"
     type: number
     sql: ${TABLE}."L_DISCOUNT" ;;
   }
 
   dimension: l_extendedprice {
+    label: "Extended Price"
     type: number
     sql: ${TABLE}."L_EXTENDEDPRICE" ;;
   }
 
   dimension: l_linenumber {
+    label: "Line number"
     type: number
     sql: ${TABLE}."L_LINENUMBER" ;;
   }
@@ -47,17 +52,20 @@ view: f_lineitems {
   }
 
   dimension: l_orderkey {
+    label: "Order Number"
     type: string
     sql: ${TABLE}."L_ORDERKEY" ;;
 
   }
 
   dimension: l_orderpriority {
+    label: "Order Priority"
     type: string
     sql: ${TABLE}."L_ORDERPRIORITY" ;;
   }
 
   dimension: l_orderstatus {
+    label: "Order Status"
     type: string
     sql: ${TABLE}."L_ORDERSTATUS" ;;
   }
@@ -69,6 +77,7 @@ view: f_lineitems {
   }
 
   dimension: l_quantity {
+    label: "Order Qty"
     type: number
     sql: ${TABLE}."L_QUANTITY" ;;
   }
@@ -80,6 +89,7 @@ view: f_lineitems {
   }
 
   dimension: l_returnflag {
+    label: "Return flag"
     type: string
     sql: ${TABLE}."L_RETURNFLAG" ;;
   }
@@ -91,16 +101,19 @@ view: f_lineitems {
   }
 
   dimension: l_shipinstruct {
+    label: "Shipping Instruction"
     type: string
     sql: ${TABLE}."L_SHIPINSTRUCT" ;;
   }
 
   dimension: l_shipmode {
+    label: "Shipping Mode"
     type: string
     sql: ${TABLE}."L_SHIPMODE" ;;
   }
 
   dimension: l_shippriority {
+    label: "Shipping Priority"
     type: number
     sql: ${TABLE}."L_SHIPPRIORITY" ;;
   }
@@ -112,16 +125,19 @@ view: f_lineitems {
   }
 
   dimension: l_supplycost {
+    label: "Supply cost"
     type: number
     sql: ${TABLE}."L_SUPPLYCOST" ;;
   }
 
   dimension: l_tax {
+    label: "Tax"
     type: number
     sql: ${TABLE}."L_TAX" ;;
   }
 
   dimension: l_totalprice {
+    label: "Total price"
     type: number
     sql: ${TABLE}."L_TOTALPRICE" ;;
   }

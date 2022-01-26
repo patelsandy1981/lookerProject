@@ -4,11 +4,13 @@ view: d_supplier {
   label: "Supplier"
 
   dimension: s_acctbal {
+    label: "Supplier Account balance"
     type: number
     sql: ${TABLE}."S_ACCTBAL" ;;
   }
 
   dimension: s_address {
+    label: "Supplier Address"
     type: string
     sql: ${TABLE}."S_ADDRESS" ;;
   }
@@ -20,16 +22,19 @@ view: d_supplier {
   }
 
   dimension: s_nation {
+    label: "Supplier Nation"
     type: string
     sql: ${TABLE}."S_NATION" ;;
   }
 
   dimension: s_phone {
+    label: "Supplier Phone"
     type: string
     sql: ${TABLE}."S_PHONE" ;;
   }
 
   dimension: s_region {
+    label: "Supplier Region"
     type: string
     sql: ${TABLE}."S_REGION" ;;
   }

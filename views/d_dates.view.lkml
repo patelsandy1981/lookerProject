@@ -27,31 +27,37 @@ view: d_dates {
   }
 
   dimension: day_of_week {
+    label: "Day of Week"
     type: number
     sql: ${TABLE}."DAY_OF_WEEK" ;;
   }
 
   dimension: dayname_of_week {
+    label: "Dayname of Week"
     type: string
     sql: ${TABLE}."DAYNAME_OF_WEEK" ;;
   }
 
   dimension: month_name {
+    label: "Month"
     type: string
     sql: ${TABLE}."MONTH_NAME" ;;
   }
 
   dimension: month_num {
+    label: "Month Number"
     type: number
     sql: ${TABLE}."MONTH_NUM" ;;
   }
 
   dimension: quarter {
+    label: "Quarter"
     type: number
     sql: ${TABLE}."QUARTER" ;;
   }
 
   dimension: year {
+    label: "Year"
     type: number
     sql: ${TABLE}."YEAR" ;;
   }
