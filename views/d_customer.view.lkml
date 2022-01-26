@@ -12,6 +12,7 @@ view: d_customer {
     type: number
     primary_key: yes
     sql: ${TABLE}."C_CUSTKEY" ;;
+    hidden: yes
   }
 
   dimension: c_mktsegment {
@@ -42,5 +43,6 @@ view: d_customer {
   measure: count {
     type: count
     drill_fields: [c_name]
+    label: "No. of Customers"
   }
 }

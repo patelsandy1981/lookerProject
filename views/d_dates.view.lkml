@@ -22,6 +22,7 @@ view: d_dates {
     type: number
     primary_key: yes
     sql: ${TABLE}."DATEKEY" ;;
+    hidden: yes
   }
 
   dimension: day_of_week {

@@ -37,10 +37,12 @@ view: d_supplier {
     type: number
     primary_key: yes
     sql: ${TABLE}."S_SUPPKEY" ;;
+    hidden: yes
   }
 
   measure: count {
     type: count
+    label: "No. of Suppliers"
     drill_fields: [s_name]
   }
 }

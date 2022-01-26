@@ -23,6 +23,7 @@ view: d_part {
     type: number
     primary_key: yes
     sql: ${TABLE}."P_PARTKEY" ;;
+    hidden: yes
   }
 
   dimension: p_size {
@@ -36,6 +37,7 @@ view: d_part {
   }
 
   measure: count {
+    label: "No. of Parts"
     type: count
     drill_fields: [p_name]
   }

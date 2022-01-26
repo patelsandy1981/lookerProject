@@ -21,6 +21,7 @@ view: f_lineitems {
   dimension: l_custkey {
     type: number
     sql: ${TABLE}."L_CUSTKEY" ;;
+    hidden: yes
   }
 
   dimension: l_discount {
@@ -41,11 +42,13 @@ view: f_lineitems {
   dimension: l_orderdatekey {
     type: number
     sql: ${TABLE}."L_ORDERDATEKEY" ;;
+    hidden: yes
   }
 
   dimension: l_orderkey {
     type: number
     sql: ${TABLE}."L_ORDERKEY" ;;
+    hidden: yes
   }
 
   dimension: l_orderpriority {
@@ -61,6 +64,7 @@ view: f_lineitems {
   dimension: l_partkey {
     type: number
     sql: ${TABLE}."L_PARTKEY" ;;
+    hidden: yes
   }
 
   dimension: l_quantity {
@@ -71,6 +75,7 @@ view: f_lineitems {
   dimension: l_receiptdatekey {
     type: number
     sql: ${TABLE}."L_RECEIPTDATEKEY" ;;
+    hidden: yes
   }
 
   dimension: l_returnflag {
@@ -81,6 +86,7 @@ view: f_lineitems {
   dimension: l_shipdatekey {
     type: number
     sql: ${TABLE}."L_SHIPDATEKEY" ;;
+    hidden: yes
   }
 
   dimension: l_shipinstruct {
@@ -101,6 +107,7 @@ view: f_lineitems {
   dimension: l_suppkey {
     type: number
     sql: ${TABLE}."L_SUPPKEY" ;;
+    hidden: yes
   }
 
   dimension: l_supplycost {
@@ -121,6 +128,7 @@ view: f_lineitems {
   measure: count {
     type: count
     drill_fields: []
+    hidden: yes
   }
 
   measure: total_sales_price {
