@@ -16,6 +16,7 @@ view: f_lineitems {
   dimension: l_commitdatekey {
     type: number
     sql: ${TABLE}."L_COMMITDATEKEY" ;;
+    hidden: yes
   }
 
   dimension: l_custkey {
