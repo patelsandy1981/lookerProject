@@ -47,7 +47,7 @@ view: f_lineitems {
   }
 
   dimension: l_orderkey {
-    type: number
+    type: string
     sql: ${TABLE}."L_ORDERKEY" ;;
 
   }
