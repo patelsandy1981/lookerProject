@@ -132,14 +132,16 @@ view: f_lineitems {
   }
 
   measure: total_sales_price {
-  type:  sum
+    type:  sum
     label: "Total Sale Price"
-  sql: ${TABLE}."L_TOTALPRICE" ;;
-  value_format_name: usd
+    description: "Total Sale Price"
+    sql: ${TABLE}."L_TOTALPRICE" ;;
+    value_format_name: usd
   }
 
   measure: avg_sales_price {
     label: "Average Sale Price"
+    description: "Average Sale Price"
     type:  average
     sql: ${TABLE}."L_TOTALPRICE" ;;
     value_format_name: usd
@@ -147,6 +149,7 @@ view: f_lineitems {
 
   measure: cumulatie_total_sales {
     label: "Cumulative Total Sales"
+    description: "Cumulative Sale Price"
     type:  running_total
     sql: ${total_sales_price} ;;
     value_format_name: usd

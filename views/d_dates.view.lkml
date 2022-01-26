@@ -16,6 +16,7 @@ view: d_dates {
     convert_tz: no
     datatype: date
     sql: ${TABLE}."DATE_VAL" ;;
+    label: "Date"
   }
 
   dimension: datekey {
