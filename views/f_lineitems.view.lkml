@@ -36,7 +36,7 @@ view: f_lineitems {
   }
 
   dimension: l_linenumber {
-    label: "Order Number"
+    label: "Order linenumber"
     type: number
     sql: ${TABLE}."L_LINENUMBER" ;;
   }
