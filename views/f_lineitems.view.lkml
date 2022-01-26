@@ -36,7 +36,6 @@ view: f_lineitems {
   }
 
   dimension: l_linenumber {
-    label: "Order linenumber"
     type: number
     sql: ${TABLE}."L_LINENUMBER" ;;
   }
@@ -50,7 +49,7 @@ view: f_lineitems {
   dimension: l_orderkey {
     type: number
     sql: ${TABLE}."L_ORDERKEY" ;;
-    hidden: yes
+
   }
 
   dimension: l_orderpriority {
