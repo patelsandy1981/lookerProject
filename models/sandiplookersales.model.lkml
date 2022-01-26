@@ -12,8 +12,8 @@ persist_with: sandiplookerproject_default_datagroup
 
 explore: f_lineitems {
 
-  label: "Orders"
-  view_label: "Orders"
+  label: "Lineitems"
+  view_label: "Lineitems"
   join:  d_customer {
     type: left_outer
     sql_on: ${f_lineitems.l_custkey}=${d_customer.c_custkey} ;;
