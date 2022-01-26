@@ -14,6 +14,7 @@ view: d_supplier {
   }
 
   dimension: s_name {
+    label: "Supplier"
     type: string
     sql: ${TABLE}."S_NAME" ;;
   }

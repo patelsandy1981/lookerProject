@@ -21,6 +21,7 @@ view: d_customer {
   }
 
   dimension: c_name {
+    label: "Customer"
     type: string
     sql: ${TABLE}."C_NAME" ;;
   }

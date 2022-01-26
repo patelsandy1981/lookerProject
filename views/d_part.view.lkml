@@ -15,6 +15,7 @@ view: d_part {
   }
 
   dimension: p_name {
+    label: "Part"
     type: string
     sql: ${TABLE}."P_NAME" ;;
   }
