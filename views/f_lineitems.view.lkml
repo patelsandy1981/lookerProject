@@ -31,12 +31,14 @@ view: f_lineitems {
     label: "Discount"
     type: number
     sql: ${TABLE}."L_DISCOUNT" ;;
+    hidden: yes
   }
 
   dimension: l_extendedprice {
     label: "Extended Price"
     type: number
     sql: ${TABLE}."L_EXTENDEDPRICE" ;;
+    hidden: yes
   }
 
   dimension: l_linenumber {
@@ -80,6 +82,7 @@ view: f_lineitems {
     label: "Order Qty"
     type: number
     sql: ${TABLE}."L_QUANTITY" ;;
+    hidden: yes
   }
 
   dimension: l_receiptdatekey {
@@ -128,6 +131,7 @@ view: f_lineitems {
     label: "Supply cost"
     type: number
     sql: ${TABLE}."L_SUPPLYCOST" ;;
+    hidden: yes
   }
 
   dimension: l_tax {
@@ -140,6 +144,7 @@ view: f_lineitems {
     label: "Total price"
     type: number
     sql: ${TABLE}."L_TOTALPRICE" ;;
+    hidden: yes
   }
 
   measure: count {
@@ -170,5 +175,13 @@ view: f_lineitems {
     type:  running_total
     sql: ${total_sales_price} ;;
     value_format_name: usd
+  }
+
+  measure: Qty_Ordered {
+    type:  sum
+    label: "Qty"
+    description: "Quantity ordered"
+    sql: ${TABLE}."l_quantity" ;;
+    value_format_name: decimal_0
   }
 }
