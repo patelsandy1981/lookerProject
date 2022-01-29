@@ -57,6 +57,7 @@ view: f_lineitems {
     label: "Order Number"
     type: string
     sql: ${TABLE}."L_ORDERKEY" ;;
+    primary_key: yes
 
   }
 
