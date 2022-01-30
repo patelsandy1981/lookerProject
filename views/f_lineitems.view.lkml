@@ -194,6 +194,7 @@ view: f_lineitems {
   }
 
   measure: Total_Cost {
+    type: sum
     label:"Total Cost"
     description: "Total Cost"
     sql: ${TABLE}."L_SUPPLYCOST" ;;
