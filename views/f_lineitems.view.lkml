@@ -185,4 +185,19 @@ view: f_lineitems {
     sql: ${TABLE}."l_quantity" ;;
     value_format_name: decimal_0
   }
+
+  measure: Avg_spend_per_customer {
+    label:"Average Spend per Customer"
+    description: "Average Spend per Customer"
+    sql: ${total_sales_price}/${d_customer.count} ;;
+    value_format_name: usd
+  }
+
+  measure: Total_Cost {
+    label:"Total Cost"
+    description: "Total Cost"
+    sql: ${TABLE}."L_SUPPLYCOST" ;;
+    value_format_name: usd
+  }
+
 }
