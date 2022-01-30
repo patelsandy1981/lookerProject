@@ -202,8 +202,13 @@ view: f_lineitems {
   }
 
   measure: Total_Sale_Price_Shipped_By_Air {
+    label:"Total Sale Price Shipped by Air"
     type: sum
+    description: "Total sales of items shipped by air"
     sql: ${TABLE}."L_TOTALPRICE" ;;
     filters: [l_shipmode: "AIR"]
   }
+
+
+
 }
