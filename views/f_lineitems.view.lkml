@@ -209,6 +209,13 @@ view: f_lineitems {
     filters: [l_shipmode: "AIR"]
   }
 
+  measure: Total_Russia_Sales {
+    label:"Total Russia Sales"
+    type: sum
+    description: "Total sales of customers in Russia"
+    sql: ${TABLE}."L_TOTALPRICE" ;;
+    filters: [d_customer.c_nation: "RUSSIA"]
+  }
 
 
 }
