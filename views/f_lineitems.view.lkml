@@ -201,4 +201,9 @@ view: f_lineitems {
     value_format_name: usd
   }
 
+  measure: Total_Sale_Price_Shipped_By_Air {
+    type: sum
+    sql: ${TABLE}."L_TOTALPRICE" ;;
+    filters: [l_shipmode: "AIR"]
+  }
 }
