@@ -252,7 +252,6 @@ view: f_lineitems {
   }
 
 
-
   measure: total_russia_sales {
     label:"Total Russia Sales"
     type: sum
