@@ -217,6 +217,8 @@ view: f_lineitems {
     value_format_name: usd
   }
 
+
+
   measure: total_sale_price_shipped_by_air {
     label:"Total Sale Price Shipped by Air"
     type: sum
@@ -234,6 +236,22 @@ view: f_lineitems {
     filters: [is_completed: "yes"]
     value_format_name: usd
   }
+
+  measure: total_gross_margin_amount {
+    label: "Total Gross Margin Amount"
+    description: "Total Gross Margin Amount"
+    sql: ${total_gross_revenue} - ${total_cost};;
+    value_format_name: usd
+  }
+
+  measure: gross_margin_percentage {
+    label: "Gross Margin Percentage"
+    description: "Total Gross Margin Amount"
+    sql: ${total_gross_margin_amount}/${total_gross_revenue};;
+    value_format_name: percent_2
+  }
+
+
 
   measure: total_russia_sales {
     label:"Total Russia Sales"
