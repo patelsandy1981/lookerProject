@@ -192,9 +192,9 @@ view: f_lineitems {
     value_format_name: usd
   }
 
-  measure: Qty_Ordered {
+  measure: total_number_of_items_sold {
     type:  sum
-    label: "Qty"
+    label: "Total number of Items sold"
     description: "Quantity ordered"
     sql: ${TABLE}."l_quantity" ;;
     value_format_name: decimal_0
@@ -232,5 +232,13 @@ view: f_lineitems {
     value_format_name: usd
   }
 
+  measure: number_of_items_returned {
+    label: "Number of items returned"
+    description: "Number of items that were returned by dissatisfied customers"
+    type: sum
+    sql: ${l_quantity} ;;
+    filters: [is_returned: "yes"]
+    # drill_fields: [detail*]
+  }
 
 }
