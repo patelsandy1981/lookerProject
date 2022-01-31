@@ -192,6 +192,8 @@ view: f_lineitems {
     value_format_name: usd
   }
 
+
+
   measure: total_number_of_items_sold {
     type:  sum
     label: "Total number of Items sold"
@@ -221,6 +223,15 @@ view: f_lineitems {
     description: "Total sales of items shipped by air"
     sql: ${TABLE}."L_TOTALPRICE" ;;
     filters: [is_shipped_by_air: "yes"]
+    value_format_name: usd
+  }
+
+  measure: total_gross_revenue {
+    label: "Total Gross Revenue"
+    type:  sum
+    description: "Sum of total price"
+    sql: ${TABLE}."L_TOTALPRICE" ;;
+    filters: [is_completed: "yes"]
     value_format_name: usd
   }
 
