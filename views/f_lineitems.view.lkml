@@ -219,7 +219,8 @@ view: f_lineitems {
     label:"Total Sale Price Shipped by Air"
     type: sum
     description: "Total sales of items shipped by air"
-    filters: [is_shipped_by_air: "Yes"]
+    sql: ${TABLE}."L_TOTALPRICE" ;;
+    filters: [is_shipped_by_air: "yes"]
     value_format_name: usd
   }
 
