@@ -200,14 +200,14 @@ view: f_lineitems {
     value_format_name: decimal_0
   }
 
-  measure: Avg_spend_per_customer {
+  measure: avg_spend_per_customer {
     label:"Average Spend per Customer"
     description: "Average Spend per Customer"
     sql: ${total_sales_price}/${d_customer.count} ;;
     value_format_name: usd
   }
 
-  measure: Total_Cost {
+  measure: total_cost {
     type: sum
     label:"Total Cost"
     description: "Total Cost"
@@ -215,7 +215,7 @@ view: f_lineitems {
     value_format_name: usd
   }
 
-  measure: Total_Sale_Price_Shipped_By_Air {
+  measure: total_sale_price_shipped_by_air {
     label:"Total Sale Price Shipped by Air"
     type: sum
     description: "Total sales of items shipped by air"
@@ -223,7 +223,7 @@ view: f_lineitems {
     value_format_name: usd
   }
 
-  measure: Total_Russia_Sales {
+  measure: total_russia_sales {
     label:"Total Russia Sales"
     type: sum
     description: "Total sales to customers in Russia"
