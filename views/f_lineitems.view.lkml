@@ -148,6 +148,20 @@ view: f_lineitems {
     hidden: yes
   }
 
+  dimension: is_returned {
+    type: yesno
+    sql: ${l_returnflag} = 'R' ;;
+  }
+
+  dimension: is_completed {
+    type: yesno
+    sql: ${l_orderstatus} = 'F' ;;
+  }
+
+  dimension: is_shipped_by_air {
+    type: yesno
+    sql: ${l_shipmode} in ('AIR','REG AIR') ;;
+  }
   measure: count {
     type: count
     drill_fields: []
@@ -205,8 +219,8 @@ view: f_lineitems {
     label:"Total Sale Price Shipped by Air"
     type: sum
     description: "Total sales of items shipped by air"
-    sql: ${TABLE}."L_TOTALPRICE" ;;
-    filters: [l_shipmode: "AIR"]
+    filters: [is_shipped_by_air: "yes"]
+    value_format_name: usd
   }
 
   measure: Total_Russia_Sales {
@@ -215,6 +229,7 @@ view: f_lineitems {
     description: "Total sales to customers in Russia"
     sql: ${TABLE}."L_TOTALPRICE" ;;
     filters: [d_customer.c_nation: "RUSSIA"]
+    value_format_name: usd
   }
 
 
