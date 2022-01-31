@@ -241,4 +241,12 @@ view: f_lineitems {
     # drill_fields: [detail*]
   }
 
+  measure: item_return_rate{
+    label: "Item Return Rate"
+    description: "Number Of Items Returned / Total Number Of Items Sold "
+    sql:$(${number_of_items_returned}/${total_number_of_items_sold} ;;
+    value_format_name:  decimal_2
+
+  }
+
 }
