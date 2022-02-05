@@ -255,7 +255,7 @@ view: f_lineitems {
   measure: gross_margin_percentage {
     label: "Gross Margin Percentage"
     description: "Total Gross Margin Amount"
-    sql: ${total_gross_margin_amount}/${total_gross_revenue};;
+    sql: 100.0 *${total_gross_margin_amount}/NULLIF(${total_gross_revenue},0);;
     value_format_name: percent_2
   }
 
