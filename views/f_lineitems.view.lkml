@@ -176,6 +176,14 @@ view: f_lineitems {
     value_format_name: usd
   }
 
+
+  measure: total_number_of_orders {
+    type:  sum
+    label: "Total Number of Orders"
+    description: "Total Number of Orders"
+    sql: ${TABLE}."L_ORDERKEY" ;;
+    value_format_name: decimal_0
+  }
   measure: avg_sales_price {
     label: "Average Sale Price"
     description: "Average of total price"
