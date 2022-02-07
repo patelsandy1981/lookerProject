@@ -247,6 +247,7 @@ view: f_lineitems {
 
   measure: total_gross_margin_amount {
     label: "Total Gross Margin Amount"
+    type: number
     description: "Total Gross Margin Amount"
     sql: ${total_gross_revenue} - ${total_cost};;
     value_format_name: usd
