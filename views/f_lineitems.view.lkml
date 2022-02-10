@@ -213,7 +213,7 @@ view: f_lineitems {
   measure: avg_spend_per_customer {
     label:"Average Spend per Customer"
     description: "Average Spend per Customer"
-    sql: ${total_sales_price}/${d_customer.count} ;;
+    sql: ${total_sales_price}/NULLIF({${d_customer.count}},0) ;;
     value_format_name: usd
   }
 
