@@ -27,8 +27,7 @@ view: d_supplier {
     label: "Supplier"
     type: string
     sql: ${TABLE}."S_NAME" ;;
-    html:<a href="/dashboards/177??Supplier={{ value | url_encode
-          }}&Supplier={{
+    html:<a href="/dashboards/177??&Supplier={{
          _filters['d_supplier.S_NAME'] }}">{{ value | url_encode }}</a> ;;
   }
 
