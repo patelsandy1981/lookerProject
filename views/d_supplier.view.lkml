@@ -28,7 +28,6 @@ view: d_supplier {
     type: string
     sql: ${TABLE}."S_NAME" ;;
     html: <a href="/dashboards/177?Supplier={{ value | url_encode}}</a> ;;
-
   }
 
   dimension: s_nation {
