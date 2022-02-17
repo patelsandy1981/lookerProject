@@ -206,7 +206,7 @@ view: f_lineitems {
     type:  sum
     label: "Total number of Items sold"
     description: "Quantity ordered"
-    sql: ${TABLE}."l_quantity" ;;
+    sql: NULLIF(${TABLE}."l_quantity",0) ;;
     value_format_name: decimal_0
   }
 
