@@ -27,6 +27,11 @@ view: d_supplier {
     label: "Supplier"
     type: string
     sql: ${TABLE}."S_NAME" ;;
+    link: {
+      label: "Supplier's website"
+      url: "www.google.com/search?q={{ value }}"
+      icon_url: "www.google.com/favicon.ico"
+    }
     html:<a href="/dashboards/177??&Supplier={{
          _filters['d_supplier.S_NAME'] }}">{{ value | url_encode }}</a> ;;
   }
