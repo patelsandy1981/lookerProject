@@ -243,6 +243,7 @@ view: f_lineitems {
     sql: ${TABLE}."L_TOTALPRICE" ;;
     filters: [is_completed: "yes"]
     value_format_name: usd
+    drill_fields: [Part_details*]
   }
 
   measure: total_gross_margin_amount {
@@ -291,15 +292,12 @@ view: f_lineitems {
     type: count_distinct
     sql: ${l_suppkey} ;;
     filters: [is_returned: "yes"]
-    drill_fields: [detail*]
-    link: {
-      label: "Explore Top 10 Suppliers Results by Gross Margin %"
-      url: "{{ link }}&sorts=f_linetimes.gross_margin_percentage+desc&limit=10"
-    }
+
+
   }
 
-  set: detail {
-    fields: [d_supplier.S_NAME, d_part.P_NAME]
+  set: Part_details {
+    fields: [d_part.P_NAME, d_part.p_brand,d_part.p_mfgr]
   }
 
   }
